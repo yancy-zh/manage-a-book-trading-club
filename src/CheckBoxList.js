@@ -7,9 +7,39 @@ import ListItemText from "@mui/material/ListItemText";
 import Checkbox from "@mui/material/Checkbox";
 import IconButton from "@mui/material/IconButton";
 import CommentIcon from "@mui/icons-material/Comment";
-
+import axios from "axios";
 export default function CheckboxList() {
   const [checked, setChecked] = React.useState([0]);
+  const [bookData, setBookData] = React.useState([0, 1, 2, 3, 4, 5, 6, 7, 8]);
+
+  const data = [0, 1, 2, 3, 4, 5, 6, 7, 8];
+
+  const getBooks = () => {
+    const getPostsUrl = "https://jsonplaceholder.typicode.com/albums";
+    var wikiConfig = {
+      timeout: 6500,
+    };
+    async function getJsonResp(url, config) {
+      const res = await axios.get(url, config);
+      const books = res.data.map((e) => e.title);
+      return books;
+    }
+    return getJsonResp(getPostsUrl, wikiConfig)
+      .then((data) => {
+        return data;
+      })
+      .catch((error) => {
+        console.log("an error occurred: " + error);
+        return null;
+      });
+  };
+
+  React.useEffect(() => {
+    getBooks().then((result) => {
+      
+      setBookData(result);
+    });
+  }, []);
 
   const handleToggle = (value) => () => {
     const currentIndex = checked.indexOf(value);
@@ -25,8 +55,8 @@ export default function CheckboxList() {
   };
 
   return (
-    <List sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}>
-      {[0, 1, 2, 3].map((value) => {
+    <List sx={{ width: "100%", maxWidth: "100%", bgcolor: "AliceBlue" }}>
+      {bookData.map((value) => {
         const labelId = `checkbox-list-label-${value}`;
 
         return (
@@ -53,7 +83,7 @@ export default function CheckboxList() {
                   inputProps={{ "aria-labelledby": labelId }}
                 />
               </ListItemIcon>
-              <ListItemText id={labelId} primary={`Line item ${value + 1}`} />
+              <ListItemText id={labelId} primary={`${value }`} />
             </ListItemButton>
           </ListItem>
         );
