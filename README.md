@@ -16,15 +16,19 @@ https://www.freecodecamp.org/learn/coding-interview-prep/take-home-projects/mana
 ## Dependencies
 
 - [material ui](https://mui.com/material-ui/react-app-bar/)
-- [materail icons](https://mui.com/material-ui/material-icons/)
+- [material icons](https://mui.com/material-ui/material-icons/)
 - [Antd](https://ant.design/components/layout)
 - [react navigation](https://reactnavigation.org/docs/getting-started)
 - [how to customize material UI](https://mui.com/material-ui/customization/how-to-customize/)
 - [CSS docs](https://developer.mozilla.org/en-US/docs/Web/CSS/)
+- [Html docs](https://developer.mozilla.org/en-US/docs/Web/HTML)
 - [json data](https://jsonplaceholder.typicode.com/)
+
 ### install ajv
 
-`npm install --save-dev ajv@^7`
+```
+npm install --save-dev ajv@^7
+```
 
 ### install mui
 
@@ -50,3 +54,5 @@ In the project directory, you can run:
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+

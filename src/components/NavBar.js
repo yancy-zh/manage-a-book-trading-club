@@ -4,23 +4,21 @@ const myStyle = {
   float: "right",
 };
 
-
 const Navbar = () => {
   return (
     <div>
       <ul>
-
         <li>
-          <a href="#Books">Books</a>
+          <a href="/books">Books</a>
         </li>
         <li>
-          <a href="#Requests">Requests</a>
+          <a href="/requests">Requests</a>
         </li>
         <li>
-          <a href="#Trades">Trades</a>
+          <a href="/trades">Trades</a>
         </li>
         <li>
-          <a href="#Users">Users</a>
+          <a href="/users">Users</a>
         </li>
         <li style={myStyle}>
           <button className="active">Login</button>

@@ -40,10 +40,3 @@
   flex: content;
   flex-direction: column;
 }
-.ls_title{
-  background-color:aliceblue;
-  border: 1px solid rgba(200, 200, 200 ,.8);
-}
-.ls_body{
-  border: 1px solid rgba(200, 200, 200 ,.8);
-}
