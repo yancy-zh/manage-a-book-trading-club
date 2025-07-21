@@ -12,8 +12,6 @@ export default function CheckboxList() {
   const [checked, setChecked] = React.useState([0]);
   const [bookData, setBookData] = React.useState([0, 1, 2, 3, 4, 5, 6, 7, 8]);
 
-  const data = [0, 1, 2, 3, 4, 5, 6, 7, 8];
-
   const getBooks = () => {
     const getPostsUrl = "https://jsonplaceholder.typicode.com/albums";
     var wikiConfig = {
@@ -36,7 +34,6 @@ export default function CheckboxList() {
 
   React.useEffect(() => {
     getBooks().then((result) => {
-      
       setBookData(result);
     });
   }, []);
@@ -83,7 +80,7 @@ export default function CheckboxList() {
                   inputProps={{ "aria-labelledby": labelId }}
                 />
               </ListItemIcon>
-              <ListItemText id={labelId} primary={`${value }`} />
+              <ListItemText id={labelId} primary={`${value}`} />
             </ListItemButton>
           </ListItem>
         );

@@ -7,7 +7,7 @@ const myStyle = {
 const Navbar = () => {
   return (
     <div>
-      <ul>
+      <ul className="bar_ul">
         <li>
           <a href="/books">Books</a>
         </li>
