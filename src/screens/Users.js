@@ -1,5 +1,5 @@
 import React from "react";
-import "./Users.css";
+import "../styles/Users.css";
 import axios from "axios";
 import UserCard from "../components/UserCard";
 function Users() {
@@ -26,20 +26,18 @@ function Users() {
       });
   };
 
-    React.useEffect(() => {
-      getUsers().then((result) => {
-        setUsersData(result);
-      });
-    }, []);
+  React.useEffect(() => {
+    getUsers().then((result) => {
+      setUsersData(result);
+    });
+  }, []);
 
-  const users = [
-    { id: 1, name: "Alice", age: 30 },
-    { id: 2, name: "Bob", age: 25 },
-  ];
   return (
     <div className="ls-box">
-      <div className="ls_title1">Users</div>
-      <div className="ls_bd">
+      <div className="ls_title">
+        <h3>Users</h3>
+      </div>
+      <div className="ls_body">
         <ul>
           {usersData.map((user) => (
             <UserCard key={user.id} item={user} />
