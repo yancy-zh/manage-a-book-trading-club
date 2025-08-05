@@ -1,0 +1,35 @@
+.card-box {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(221, 221, 221); /* Grey background color */
+  border: 2px solid #666666; /* 2px solid grey border */
+  min-width: 400px;
+}
+
+.card-col {
+  flex: 1;
+  padding: 15px;
+  min-width: 150px;
+}
+.span {
+  color: blue;
+}
+.bookcard {
+  height: 100px; /* Set the desired height of the box */
+  background-color: rgb(255, 255, 255); /* Grey background color */
+  border: 2px solid #cccccc; /* 2px solid grey border */
+  padding: 10px; /* Optional: Add some padding inside the box */
+}
+.wantBookCard {
+  display: flex;
+  flex-direction: column; /* Stacks items vertically */
+  justify-content: center;
+  height: 100px; /* Set the desired height of the box */
+  background-color: rgb(255, 255, 255); /* Grey background color */
+  border: 2px solid #cccccc; /* 2px solid grey border */
+  padding: 10px; /* Optional: Add some padding inside the box */
+}
+.requestCount {
+  word-spacing: normal;
+  text-align: end;
+}
