@@ -2,7 +2,13 @@ import React from "react";
 import "../styles/Requests.css";
 import RequestCard from "../components/RequestCard";
 function Requests() {
-  const requestData = [{ user: "yao", bookGive: 2, bookTake: 3 }];
+  const requestData = [
+    { user: "yao", bookGive: 2, bookTake: 3 },
+    { user: "yao", bookGive: 2, bookTake: 3 },
+    { user: "yao", bookGive: 2, bookTake: 3 },
+
+
+  ];
   return (
     <div className="ls-box">
       <div className="ls_title">

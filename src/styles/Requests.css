@@ -3,7 +3,10 @@
   justify-content: space-between;
   background-color: rgb(221, 221, 221); /* Grey background color */
   border: 2px solid #666666; /* 2px solid grey border */
-  min-width: 400px;
+  width: 70%; /* Sets the width to 70% of the parent */
+  max-width: 1000px; /* Sets the maximum allowed width */
+  margin-top: 5px;
+  min-width: 360px;
 }
 
 .card-col {
@@ -14,8 +17,8 @@
 .span {
   color: blue;
 }
-.bookcard {
-  height: 100px; /* Set the desired height of the box */
+.giveBookCard {
+  height: 50px; /* Set the desired height of the box */
   background-color: rgb(255, 255, 255); /* Grey background color */
   border: 2px solid #cccccc; /* 2px solid grey border */
   padding: 10px; /* Optional: Add some padding inside the box */
@@ -23,8 +26,8 @@
 .wantBookCard {
   display: flex;
   flex-direction: column; /* Stacks items vertically */
-  justify-content: center;
-  height: 100px; /* Set the desired height of the box */
+  justify-content: top;
+  height: 50px; /* Set the desired height of the box */
   background-color: rgb(255, 255, 255); /* Grey background color */
   border: 2px solid #cccccc; /* 2px solid grey border */
   padding: 10px; /* Optional: Add some padding inside the box */
@@ -32,4 +35,17 @@
 .requestCount {
   word-spacing: normal;
   text-align: end;
+}
+.single-line-placeholder {
+  min-height: 1.2em; /* Adjust as needed for desired line height */
+}
+.bookWanted {
+  text-align: left;
+}
+.bookToGive {
+  text-align: left;
+}
+.ls_body {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
 }

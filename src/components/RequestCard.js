@@ -5,7 +5,10 @@ function RequestCard({ it }) {
     <div className="card-box">
       <div className="card-col">
         <span className="span">{it.user}</span> wants to give
-        <div className="bookcard">{it.bookGive}</div>
+        <div className="giveBookCard">
+          <div className="single-line-placeholder "></div>
+          <div className="bookToGive">{it.bookGive}</div>
+        </div>
       </div>
       <div className="card-col">
         <span className="span">{it.user}</span> wants to take
