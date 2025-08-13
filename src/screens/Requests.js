@@ -3,11 +3,21 @@ import "../styles/Requests.css";
 import RequestCard from "../components/RequestCard";
 function Requests() {
   const requestData = [
-    { user: "yao", bookGive: 2, bookTake: 3 },
-    { user: "yao", bookGive: 2, bookTake: 3 },
-    { user: "yao", bookGive: 2, bookTake: 3 },
-
-
+    {
+      user: "yao",
+      bookGive: "quidem molestiae enim",
+      bookTake: "sunt qui excepturi placeat culpa",
+    },
+    {
+      user: "spencer",
+      bookGive: "omnis laborum odio",
+      bookTake: "eaque aut omnis a",
+    },
+    {
+      user: "jimi",
+      bookGive: "qui fuga est a eum",
+      bookTake: "The Lost World",
+    },
   ];
   return (
     <div className="ls-box">
@@ -17,7 +27,7 @@ function Requests() {
       <div className="ls_body">
         <ul>
           {requestData.map((it) => (
-            <RequestCard it={it}/>
+            <RequestCard it={it} />
           ))}
         </ul>
       </div>

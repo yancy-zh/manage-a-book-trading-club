@@ -7,7 +7,9 @@ import ListItemText from "@mui/material/ListItemText";
 import Checkbox from "@mui/material/Checkbox";
 import IconButton from "@mui/material/IconButton";
 import CommentIcon from "@mui/icons-material/Comment";
+import RequestInfo from "../components/RequestInfo.js";
 import axios from "axios";
+import { dividerClasses } from "@mui/material";
 export default function CheckboxList() {
   const [checked, setChecked] = React.useState([0]);
   const [bookData, setBookData] = React.useState([0, 1, 2, 3, 4, 5, 6, 7, 8]);
@@ -59,11 +61,7 @@ export default function CheckboxList() {
         return (
           <ListItem
             key={value}
-            secondaryAction={
-              <IconButton edge="end" aria-label="comments">
-                <CommentIcon />
-              </IconButton>
-            }
+            secondaryAction={<RequestInfo />}
             disablePadding
           >
             <ListItemButton
